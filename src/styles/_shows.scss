@@ -8,8 +8,16 @@
         grid-template-columns:1fr 1fr 1fr;
         gap:24px;
         display: none;
+        @media (max-width:768px){
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        
+       
          &--is-active{
             display: grid;
+            
             
          }
 
@@ -23,6 +31,12 @@
     &__tabs{
         display: flex;
         justify-content: center;
+        @media(max-width:768px){
+            white-space: nowrap;
+            overflow-x:scroll ;
+            padding-left: 20px;
+        }
+
         &__button{
             color:variaveis.$corTextoSecudario;
             font-size: 20px;
@@ -36,6 +50,9 @@
 
             &--is-active{
                 border-bottom: 5px solid variaveis.$corTextoSecudario;
+            }
+            @media(max-width:768px){
+                font-size: 16px;
             }
         }
         
